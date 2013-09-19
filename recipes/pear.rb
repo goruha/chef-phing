@@ -9,7 +9,7 @@
 
 include_recipe "php"
 
-# If phing version is a preferred state, 
+# If phing version is a preferred state,
 # get the latest version of that state
 case node["phing"]["version"]
 when "stable", "beta", "devel"
@@ -34,4 +34,7 @@ php_pear "phing" do
   version node["phing"]["version"]
   channel channel.channel_name
   action :install
+  if defined?(shell_timeout)
+    shell_timeout node["phing"]["shell_timeout"]
+  end
 end
