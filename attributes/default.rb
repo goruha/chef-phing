@@ -16,7 +16,7 @@ default["phing"]["version"] = "stable"
 
 # Change timeout if phing throw exception shell timeout
 # This php cookbook support shell timeout https://github.com/priestjim/chef-php
-default["phing"]["shell_timeout"] = 60
+default["phing"]["shell_timeout"] = 600
 
 # URL of allreleases.xml for pear to install from preferred states
 default["phing"]["allreleases"] = "http://pear.phing.info/rest/r/phing/allreleases.xml"
